@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+   
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #6a5be2;
+    min-height: 100vh;
+    @media (min-width:768px) {
+        align-items: center;
+    }
+}
+
+.wrapper {
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.App {
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    position: relative;
+
+    @media (min-width:768px) {
+        border-radius: 2rem;
+        padding: 2rem;
+    }
+}
+
+.start {
+    background: white;
+    position: fixed;
+    z-index: 2;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    font-size: 5rem;
+    transition: opacity .3s;
+
+    &__loaded {
+        opacity: 0;
+        z-index: -1;
+    }
+}
